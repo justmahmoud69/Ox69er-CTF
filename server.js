@@ -389,10 +389,10 @@ app.get('/api/c10clue',(req,res)=>{
 
 // File downloads
 app.get('/assets/forensics-aint-fun.pptm',(req,res)=>{
-  res.download(path.join(__dirname,'public','assets','forensics-aint-fun.pptm'),'forensics-aint-fun.pptm');
+  res.download(path.join(__dirname,'assets','forensics-aint-fun.pptm')),'forensics-aint-fun.pptm');
 });
 app.get('/assets/Untitled1.exe',(req,res)=>{
-  res.download(path.join(__dirname,'public','assets','Untitled1.exe'),'Untitled1.exe');
+  res.download(path.join(__dirname,'assets','Untitled1.exe')),'Untitled1.exe');
 });
 
 // Master jump (session-only, no localStorage, resets on refresh)
