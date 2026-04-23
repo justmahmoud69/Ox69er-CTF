@@ -87,7 +87,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 const limiter = rateLimit({
   windowMs: 10*60*1000,
   max: 200,
@@ -667,5 +667,5 @@ app.post('/api/mod/unban-ip', (req, res) => {
 
 // ── CATCH-ALL (must be last) ──
 app.get('*',(req,res)=>{
-  res.sendFile(path.join(__dirname,'public','index.html'));
+  res.sendFile(path.join(__dirname,'index.html'));
 });
